@@ -13,7 +13,7 @@ function App() {
   }, [getCity])
   async function handleWeather (city) {
     try {
-      const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=c8d93de4c2984f5186b180621241711&q=${city}&days=5`)
+      const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=c8d93de4c2984f5186b180621241711&q=${city}&days=5`)
       const data = await res.json();
       if (data.error) {
         setWeatherError(data);

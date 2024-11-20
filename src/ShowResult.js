@@ -5,7 +5,8 @@ function ShowResult(props) {
   const weatherData = props.successResult;
   const d = weatherData? new Date(weatherData.location.localtime): new Date();
   let hour = d.getHours();
-  hour += 1;
+  hour == 23? hour = 0: hour += 1;
+  
 
   return (
     <div className="show-data">
